@@ -1,10 +1,12 @@
-﻿using SimpleCQRS;
+﻿using Lokad.Cqrs;
+
+using SimpleCQRS.ReadModel;
 
 namespace CQRSGui
 {
     public static class ServiceLocator
     {
-        public static FakeBus Bus { get; set; }
-       
+        public static IMessageSender Bus { get; set; }
+        public static IReadModelFacade ReadModel { get; set; }
     }
 }

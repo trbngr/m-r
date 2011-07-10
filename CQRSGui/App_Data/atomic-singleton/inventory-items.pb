@@ -1,0 +1,1 @@
+<InventoryItems xmlns="http://schemas.datacontract.org/2004/07/SimpleCQRS.ReadModel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Items xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/></InventoryItems>

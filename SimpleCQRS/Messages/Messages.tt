@@ -1,0 +1,38 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="$(SolutionDir)\lib\message-contracts\EventDay.MessageContracts.dll" #>
+<#@ import namespace="EventDay.MessageContracts" #>
+using System;
+using System.Runtime.Serialization;
+
+using Lokad.Cqrs;
+
+using Newtonsoft.Json;
+
+using ProtoBuf;
+
+namespace SimpleCQRS.Messages
+{
+// ReSharper disable UnusedMember.Local
+	<# var generator = new WriteForProtoBufNet();	
+	
+	  generator.CommandInterface = "Define.Command";
+	  generator.EventInterface = "DomainEvent";
+	  generator.Flavor = MemberFlavor.ReadOnlyAutoProperty;
+	var dsl = @"
+
+RemoveItemsFromInventory?(Guid InventoryItemId, int Count, int OriginalVersion)
+CheckInItemsToInventory?(Guid InventoryItemId, int Count, int OriginalVersion)
+CreateInventoryItem?(Guid InventoryItemId, string Name)
+RenameInventoryItem?(Guid InventoryItemId, string NewName, int OriginalVersion)
+DeactivateInventoryItem?(Guid InventoryItemId, int OriginalVersion)
+
+ItemsRemovedFromInventory!(Guid Id, int Count)
+InventoryItemRenamed!(Guid Id, string NewName)
+InventoryItemDeactivated!(Guid Id)
+ItemsCheckedInToInventory!(Guid Id, int Count)
+InventoryItemCreated!(Guid Id, string Name)
+
+	";	#>
+	<#= GeneratorUtil.Build(dsl, generator) #>
+// ReSharper restore UnusedMember.Local
+}
