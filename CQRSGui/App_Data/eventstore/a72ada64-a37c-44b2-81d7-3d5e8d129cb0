@@ -1,6 +1,0 @@
-/* header 0000000000000136 */
-@EventStore.EventDescriptor9http://schemas.datacontract.org/2004/07/SimpleCQRS.Domain	i)http://www.w3.org/2001/XMLSchema-instance@	EventData.type˜a:InventoryItemCreated	a;http://schemas.datacontract.org/2004/07/SimpleCQRS.Messages^Versionƒ^Id™$a72ada64-a37c-44b2-81d7-3d5e8d129cb0^Name™chris martin
-/* footer 00000000000001360000000000000001I/fy/mwuoDPPtRReLfalMZM3OOs= */
-/* header 0000000000000127 */
-@EventStore.EventDescriptor9http://schemas.datacontract.org/2004/07/SimpleCQRS.Domain	i)http://www.w3.org/2001/XMLSchema-instance@	EventData.type˜a:InventoryItemDeactivated	a;http://schemas.datacontract.org/2004/07/SimpleCQRS.Messages^Version‰^Id™$a72ada64-a37c-44b2-81d7-3d5e8d129cb0
-/* footer 00000000000001270000000000000002WsLIHqO7TIXSZ2e6SW6vCvAa0r0= */
